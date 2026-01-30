@@ -1,36 +1,181 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aadhaar System Optimization Analysis Website
 
-## Getting Started
+A stunning, interactive Next.js website showcasing analysis of India's Aadhaar system revealing ₹370 Crore inefficiencies with 6 strategic solutions delivering 8-10X ROI.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Modern Stack**: Next.js 14 with App Router, TypeScript, Tailwind CSS
+- **Interactive Components**: 3D flip cards, animated charts, count-up metrics
+- **Fully Responsive**: Optimized for mobile, tablet, and desktop
+- **Performance Optimized**: Lazy loading, code splitting, optimized animations
+- **SEO Ready**: Meta tags, Open Graph, structured data
+- **Production Ready**: Ready to deploy to Vercel in one click
+
+## 📋 Prerequisites
+
+- Node.js 18+ and npm
+- Git (optional, for version control)
+
+## 🛠️ Setup Instructions
+
+1. **Navigate to the project directory**:
+   ```bash
+   cd website
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Run development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**:
+   Visit [http://localhost:3000](http://localhost:3000)
+
+## 📄 Replacing the PDF Report
+
+1. Replace the placeholder file at `public/report.pdf` with your actual UIDAI analysis report
+2. Ensure the file is named exactly `report.pdf`
+3. The download button will automatically serve your report
+
+## 🎨 Customization
+
+### Colors
+
+Edit `tailwind.config.ts` to change the color palette:
+
+```typescript
+colors: {
+  primary: "#1E3A8A",    // Deep Blue
+  secondary: "#F97316",  // Vibrant Orange
+  accent: "#10B981",     // Emerald Green
+  danger: "#EF4444",     // Bold Red
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Content
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Edit `lib/data.ts` to update:
+- Key metrics and statistics
+- Problem statements
+- Findings data
+- Solutions roadmap
+- Impact metrics
+- Team information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Components
 
-## Learn More
+Individual sections are in `components/`:
+- `Hero.tsx` - Hero section with animated metrics
+- `ProblemStatement.tsx` - Challenge overview
+- `FindingsCards.tsx` - Interactive flip cards
+- `DataVisualization.tsx` - Charts and graphs
+- `SolutionsTimeline.tsx` - Recommendations timeline
+- `ImpactMetrics.tsx` - Impact statistics
+- `Team.tsx` - Team and methodology
+- `CallToAction.tsx` - CTA and footer
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Deploy to Vercel (Recommended)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Install Vercel CLI** (optional):
+   ```bash
+   npm install -g vercel
+   ```
 
-## Deploy on Vercel
+2. **Deploy**:
+   ```bash
+   vercel
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Or use Vercel Dashboard**:
+   - Push code to GitHub
+   - Import repository in Vercel
+   - Deploy automatically
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Build for Production
+
+```bash
+npm run build
+npm run start
+```
+
+## 🧪 Testing
+
+Run the production build locally:
+
+```bash
+npm run build
+npm run start
+```
+
+Check Lighthouse scores:
+- Open Chrome DevTools
+- Run Lighthouse audit
+- Target: 95+ on all metrics
+
+## 📦 Tech Stack
+
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Charts**: Recharts
+- **Icons**: Lucide React
+- **Fonts**: Inter, JetBrains Mono
+
+## 📁 Project Structure
+
+```
+website/
+├── app/
+│   ├── layout.tsx       # Root layout with metadata
+│   ├── page.tsx         # Main landing page
+│   └── globals.css      # Global styles
+├── components/          # All section components
+│   ├── Hero.tsx
+│   ├── ProblemStatement.tsx
+│   ├── FindingsCards.tsx
+│   ├── DataVisualization.tsx
+│   ├── SolutionsTimeline.tsx
+│   ├── ImpactMetrics.tsx
+│   ├── Team.tsx
+│   └── CallToAction.tsx
+├── lib/
+│   ├── data.ts          # All content data
+│   └── utils.ts         # Utility functions
+├── public/
+│   └── report.pdf       # PDF report (replace this)
+├── tailwind.config.ts   # Tailwind configuration
+├── tsconfig.json        # TypeScript configuration
+├── next.config.mjs      # Next.js configuration
+└── package.json         # Dependencies
+```
+
+## 🎯 Performance Optimization
+
+- Lazy loading for images and charts
+- Code splitting for each component
+- Optimized animations with Framer Motion
+- Responsive images
+- Minimal bundle size
+
+## 📝 License
+
+Built for Government of India Digital Infrastructure Hackathon.
+© 2026 IIT Madras Data Science Team
+
+## 🤝 Support
+
+For questions or issues, please contact the IIT Madras Data Science Team.
+
+## 🌟 Acknowledgments
+
+- IIT Madras Data Science Program
+- UIDAI for providing the dataset
+- Government of India Digital Infrastructure Initiative
