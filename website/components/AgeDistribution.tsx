@@ -55,7 +55,7 @@ export default function AgeDistribution() {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={({ name, percent }) => `${name.replace("Age ", "")}: ${(percent * 100).toFixed(0)}%`}
+                  label={(entry: any) => `${entry.name.replace("Age ", "")}: ${(entry.percent * 100).toFixed(0)}%`}
                   outerRadius={110}
                   fill="#8884d8"
                   dataKey="value"
@@ -65,7 +65,7 @@ export default function AgeDistribution() {
                   ))}
                 </Pie>
                 <Tooltip
-                  formatter={(value: number) => value.toLocaleString()}
+                  formatter={(value: any) => value.toLocaleString()}
                   contentStyle={{
                     backgroundColor: "rgba(255, 255, 255, 0.95)",
                     border: "1px solid #e5e7eb",
@@ -95,7 +95,7 @@ export default function AgeDistribution() {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={({ name, percent }) => `${name.replace("Age ", "")}: ${(percent * 100).toFixed(0)}%`}
+                  label={(entry: any) => `${entry.name.replace("Age ", "")}: ${(entry.percent * 100).toFixed(0)}%`}
                   outerRadius={110}
                   fill="#8884d8"
                   dataKey="value"
@@ -106,7 +106,7 @@ export default function AgeDistribution() {
                   ))}
                 </Pie>
                 <Tooltip
-                  formatter={(value: number) => value.toLocaleString()}
+                  formatter={(value: any) => value.toLocaleString()}
                   contentStyle={{
                     backgroundColor: "rgba(255, 255, 255, 0.95)",
                     border: "1px solid #e5e7eb",

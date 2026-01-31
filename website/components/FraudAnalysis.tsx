@@ -37,7 +37,7 @@ export default function FraudAnalysis() {
           >
             <AlertTriangle className="w-12 h-12 text-danger mb-3" />
             <div className="text-3xl font-bold font-mono text-danger mb-2">
-              {fraudAnalysisData.suspiciousPincodes.toLocaleString()}
+              {fraudAnalysisData.suspiciousPincodes.toLocaleString('en-US')}
             </div>
             <div className="text-sm text-neutral-600">Suspicious Pincodes (45%)</div>
           </motion.div>
@@ -51,7 +51,7 @@ export default function FraudAnalysis() {
           >
             <CheckCircle className="w-12 h-12 text-accent mb-3" />
             <div className="text-3xl font-bold font-mono text-accent mb-2">
-              {fraudAnalysisData.normalPincodes.toLocaleString()}
+              {fraudAnalysisData.normalPincodes.toLocaleString('en-US')}
             </div>
             <div className="text-sm text-neutral-600">Normal Pincodes (55%)</div>
           </motion.div>
@@ -118,7 +118,7 @@ export default function FraudAnalysis() {
                   cx="50%"
                   cy="50%"
                   labelLine={false}
-                  label={({ risk, percentage }) => `${risk}: ${percentage}%`}
+                  label={(entry: any) => `${entry.risk}: ${entry.percentage}%`}
                   outerRadius={100}
                   fill="#8884d8"
                   dataKey="count"
@@ -128,7 +128,7 @@ export default function FraudAnalysis() {
                   ))}
                 </Pie>
                 <Tooltip
-                  formatter={(value: number) => value.toLocaleString()}
+                  formatter={(value: any) => value.toLocaleString('en-US')}
                   contentStyle={{
                     backgroundColor: "rgba(255, 255, 255, 0.95)",
                     border: "1px solid #e5e7eb",

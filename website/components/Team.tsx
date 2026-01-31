@@ -1,7 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { teamMembers } from "@/lib/data";
 import { Clock, Map, Search, TrendingUp, Shield } from "lucide-react";
+
+// Type definition for team member
+interface TeamMember {
+  name: string;
+  role: string;
+  institution: string;
+  avatar: string;
+  specialization?: string;
+  email?: string;
+}
 
 const methodologies = [
   { name: "Temporal Analysis", Icon: Clock },
@@ -18,29 +29,9 @@ const techStack = [
   "NumPy",
   "Matplotlib",
   "Seaborn",
-];
-
-const teamMembers = [
-  {
-    name: "Team Leader",
-    role: "Data Science Lead",
-    avatar: "TL",
-  },
-  {
-    name: "Data Analyst",
-    role: "Statistical Analysis",
-    avatar: "DA",
-  },
-  {
-    name: "ML Engineer",
-    role: "Fraud Detection Models",
-    avatar: "ME",
-  },
-  {
-    name: "Visualization Specialist",
-    role: "Data Storytelling",
-    avatar: "VS",
-  },
+  "Next.js",
+  "React",
+  "Recharts",
 ];
 
 export default function Team() {
@@ -64,20 +55,32 @@ export default function Team() {
 
         {/* Team Members */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 max-w-5xl mx-auto">
-          {teamMembers.map((member, index) => (
+          {(teamMembers as TeamMember[]).map((member, index) => (
             <motion.div
-              key={member.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className="bg-neutral-50 rounded-xl p-6 text-center hover:shadow-lg transition-all duration-300"
+              transition={{ delay: index * 0.1, duration: 0.4 }}
+              className="bg-white rounded-xl p-6 shadow-lg text-center hover:shadow-2xl transition-shadow duration-300"
             >
-              <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white text-2xl font-bold">
+              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary text-white flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 {member.avatar}
               </div>
-              <h4 className="font-bold text-neutral-900 mb-1">{member.name}</h4>
-              <p className="text-sm text-neutral-600">{member.role}</p>
+              <h3 className="text-xl font-bold text-neutral-900 mb-2">{member.name}</h3>
+              <p className="text-primary font-semibold mb-1">{member.role}</p>
+              <p className="text-sm text-neutral-600 mb-3">{member.institution}</p>
+              {member.specialization && (
+                <p className="text-xs text-neutral-500 italic mb-2">{member.specialization}</p>
+              )}
+              {member.email && (
+                <a
+                  href={`mailto:${member.email}`}
+                  className="text-xs text-primary hover:underline break-all"
+                >
+                  {member.email}
+                </a>
+              )}
             </motion.div>
           ))}
         </div>

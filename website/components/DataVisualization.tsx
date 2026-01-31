@@ -147,7 +147,7 @@ export default function DataVisualization() {
                   <XAxis dataKey="month" />
                   <YAxis label={{ value: "Transactions", angle: -90, position: "insideLeft" }} />
                   <Tooltip
-                    formatter={(value) => value.toLocaleString()}
+                    formatter={(value: any) => value.toLocaleString()}
                     contentStyle={{
                       backgroundColor: "rgba(255, 255, 255, 0.95)",
                       border: "1px solid #e5e7eb",
@@ -178,7 +178,7 @@ export default function DataVisualization() {
                   <XAxis type="number" />
                   <YAxis dataKey="state" type="category" width={120} style={{ fontSize: "12px" }} />
                   <Tooltip
-                    formatter={(value) => value.toLocaleString()}
+                    formatter={(value: any) => value.toLocaleString()}
                     contentStyle={{
                       backgroundColor: "rgba(255, 255, 255, 0.95)",
                       border: "1px solid #e5e7eb",
@@ -208,7 +208,7 @@ export default function DataVisualization() {
                   <XAxis type="number" />
                   <YAxis dataKey="district" type="category" width={180} style={{ fontSize: "11px" }} />
                   <Tooltip
-                    formatter={(value) => value.toLocaleString()}
+                    formatter={(value: any) => value.toLocaleString()}
                     contentStyle={{
                       backgroundColor: "rgba(255, 255, 255, 0.95)",
                       border: "1px solid #e5e7eb",

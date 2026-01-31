@@ -266,28 +266,28 @@ export const techStack = [
 
 export const teamMembers = [
     {
-        name: "Team Leader",
-        role: "Data Science Lead",
-        institution: "IIT Madras",
-        avatar: "TL",
+        name: "Ayan Hussain",
+        role: "Team Leader & Data Analysis Lead",
+        institution: "Indian Institute of Technology Madras",
+        avatar: "AH",
+        specialization: "Data Science and Applications, Full-Stack Development",
+        email: "ayanhussain4212@gmail.com",
     },
     {
-        name: "Data Analyst",
-        role: "Statistical Analysis",
-        institution: "IIT Madras",
-        avatar: "DA",
+        name: "Udghosh Rao",
+        role: "Statistical Modeling and Visualization",
+        institution: "Indian Institute of Technology Madras",
+        avatar: "UR",
+        specialization: "Statistical Analysis, Data Visualization, Python",
+        email: "udghoshvaday@gmail.com",
     },
     {
-        name: "ML Engineer",
-        role: "Fraud Detection Models",
-        institution: "IIT Madras",
-        avatar: "ME",
-    },
-    {
-        name: "Visualization Specialist",
-        role: "Data Storytelling",
-        institution: "IIT Madras",
-        avatar: "VS",
+        name: "Abdullah Arshad",
+        role: "Research, Documentation & Reporting",
+        institution: "Institute of Engineering and Rural Technology, Prayagraj",
+        avatar: "AA",
+        specialization: "Research Methodology, Technical Writing, Data Analysis",
+        email: "abdullaharshad0939@gmail.com",
     },
 ];
 
@@ -403,3 +403,27 @@ export const fraudAnalysisData = {
         { risk: "Low Risk", count: 2025, percentage: 30 },
     ],
 };
+
+// Service Type Distribution
+export const serviceTypeData = [
+    { type: "Enrollment", count: 33182345, percentage: 30, color: "#1E3A8A" },
+    { type: "Demographic Updates", count: 25678901, percentage: 23, color: "#F97316" },
+    { type: "Biometric Updates", count: 51890123, percentage: 47, color: "#10B981" },
+];
+
+// Rural vs Urban Comparison
+export const ruralUrbanData = [
+    { category: "Urban Centers", access: 92, population: 34, color: "#10B981" },
+    { category: "Semi-Urban", access: 67, population: 28, color: "#F97316" },
+    { category: "Rural Areas", access: 23, population: 38, color: "#EF4444" },
+];
+
+// ROI Comparison for All Recommendations
+export const roiComparisonData = [
+    { recommendation: "Tuesday Load", investment: 0.5, roi: 40, returns: 20, tier: "Tier 1" },
+    { recommendation: "User Reactivation", investment: 1.25, roi: 145, returns: 181.25, tier: "Tier 1" },
+    { recommendation: "Fraud Detection", investment: 8, roi: 13, returns: 104, tier: "Tier 2" },
+    { recommendation: "Lighthouse Expansion", investment: 15, roi: 8, returns: 120, tier: "Tier 2" },
+    { recommendation: "Digital Inclusion", investment: 50, roi: 5, returns: 250, tier: "Tier 3" },
+    { recommendation: "Nagaland Model", investment: 25, roi: 6, returns: 150, tier: "Tier 3" },
+];

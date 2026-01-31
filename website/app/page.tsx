@@ -4,6 +4,7 @@ import FindingsCards from "@/components/FindingsCards";
 import AgeDistribution from "@/components/AgeDistribution";
 import DataVisualization from "@/components/DataVisualization";
 import GeographicHotspots from "@/components/GeographicHotspots";
+import AdditionalInsights from "@/components/AdditionalInsights";
 import SolutionsTimeline from "@/components/SolutionsTimeline";
 import ImpactMetrics from "@/components/ImpactMetrics";
 import FraudAnalysis from "@/components/FraudAnalysis";
@@ -19,6 +20,7 @@ export default function Home() {
       <AgeDistribution />
       <DataVisualization />
       <GeographicHotspots />
+      <AdditionalInsights />
       <SolutionsTimeline />
       <ImpactMetrics />
       <FraudAnalysis />

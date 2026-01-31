@@ -70,7 +70,7 @@ export default function GeographicHotspots() {
                 <div className="flex items-end gap-2">
                   <TrendingUp className="w-4 h-4 text-primary" />
                   <span className="font-mono text-2xl font-bold text-primary">
-                    {pincode.volume.toLocaleString()}
+                    {pincode.volume.toLocaleString('en-US')}
                   </span>
                 </div>
                 <p className="text-xs text-neutral-500 mt-1">Total Transactions</p>
